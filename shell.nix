@@ -1,6 +1,11 @@
 { config, lib, pkgs, ... }:
 
 {
+    home.packages = [
+      pkgs.tig
+      pkgs.k9s
+    ];
+
     programs.zsh = {
         enable = true;
         autosuggestion.enable = true;
