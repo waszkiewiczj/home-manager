@@ -103,6 +103,9 @@
             autocmd StdinReadPre * let s:std_in=1
             autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
 
+            " Close NERDTree if it is the last window
+            autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
             set list
             set listchars=eol:⏎,tab:>-,trail:⋅,extends:❯,precedes:❮,space:␣
         '';
