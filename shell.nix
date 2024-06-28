@@ -65,13 +65,14 @@
 
     programs.vim = {
         enable = true;
-        plugins = [
-            pkgs.vimPlugins.onedark-vim
-            pkgs.vimPlugins.fzf-vim
-            pkgs.vimPlugins.nerdtree
-            pkgs.vimPlugins.lightline-vim
-            pkgs.vimPlugins.vim-gitgutter
-            pkgs.vimPlugins.vim-eunuch
+        plugins = with pkgs.vimPlugins; [
+            onedark-vim
+            fzf-vim
+            nerdtree
+            lightline-vim
+            vim-gitgutter
+            vim-eunuch
+            vim-indent-guides
         ];
         settings = {
             number = true;
@@ -104,6 +105,11 @@
 
             " Close NERDTree if it is the last window
             autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+            let g:indent_guides_enable_on_vim_startup = 1
+            let g:indent_guides_auto_colors = 0
+            autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=lightgrey
+            autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgrey
 
             set list
             set listchars=eol:⏎,tab:>-,trail:⋅,extends:❯,precedes:❮,space:␣
