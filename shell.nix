@@ -46,6 +46,22 @@
     programs.tmux = {
         enable = true;
         mouse = true;
+        clock24 = true;
+        plugins = with pkgs.tmuxPlugins; [
+          yank
+          sensible
+          {
+            plugin = dracula;
+            extraConfig = ''
+              set -g @dracula-show-battery false
+              set -g @dracula-show-powerline true
+              set -g @dracula-refresh-rate 10
+            '';
+          }
+        ];
+        extraConfig = ''
+          set -g mouse on
+        '';
     };
 
     programs.direnv = {
@@ -59,14 +75,14 @@
     programs.bat = {
         enable = true;
         config = {
-            theme = "GitHub";
+            theme = "Dracula";
         };
     };
 
     programs.vim = {
         enable = true;
         plugins = with pkgs.vimPlugins; [
-            onedark-vim
+            dracula-vim
             fzf-vim
             nerdtree
             lightline-vim
@@ -79,24 +95,11 @@
             relativenumber = true;
         };
         extraConfig = ''
-            " onedark.vim override: Don't set a background color when running in a terminal;
-            " just use the terminal's background color
-            " `gui` is the hex color code used in GUI mode/nvim true-color mode
-            " `cterm` is the color code used in 256-color mode
-            " `cterm16` is the color code used in 16-color mode
-            if (has("autocmd") && !has("gui_running"))
-            augroup colorset
-                autocmd!
-                let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
-                autocmd ColorScheme * call onedark#set_highlight("Normal", { "fg": s:white }) " `bg` will not be styled since there is no `bg` setting
-            augroup END
-            endif
-
             let g:lightline = {
                 \ 'colorscheme': 'one',
                 \ }
 
-            colorscheme onedark
+            colorscheme dracula 
 
             let NERDTreeShowHidden=1
             " Start NERDTree. If a file is specified, move the cursor to its window.
@@ -107,9 +110,6 @@
             autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
             let g:indent_guides_enable_on_vim_startup = 1
-            let g:indent_guides_auto_colors = 0
-            autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=lightgrey
-            autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgrey
 
             set list
             set listchars=eol:⏎,tab:>-,trail:⋅,extends:❯,precedes:❮,space:␣
