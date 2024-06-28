@@ -38,7 +38,6 @@
                 "kubectl"
                 "ansible"
                 "terraform"
-                "pyenv"
                 "gcloud"
             ];
         };
@@ -109,5 +108,10 @@
             set list
             set listchars=eol:⏎,tab:>-,trail:⋅,extends:❯,precedes:❮,space:␣
         '';
+      };
+
+    programs.pyenv = {
+      enable = true;
+      enableZshIntegration = true;
     };
 }
