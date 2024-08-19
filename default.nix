@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ./shell.nix
+    ./shell
   ];
 }
