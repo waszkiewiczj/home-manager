@@ -1,6 +1,10 @@
 { config, lib, pkgs, ... }:
 
 {
+    home.packages = [
+        pkgs.meslo-lgs-nf
+    ];
+
     programs.vscode = {
         enable = true;
         extensions = with pkgs.vscode-extensions; [
@@ -12,6 +16,7 @@
         ];
         userSettings = {
             "workbench.colorTheme" = "Dracula Theme";
+            "editor.fontFamily" = "MesloLGS NF";
         };
     };
 }
