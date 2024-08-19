@@ -7,8 +7,8 @@
     ];
 
     home.packages = [
-      pkgs.tig
-      pkgs.k9s
+        pkgs.tig
+        pkgs.k9s
     ];
 
     programs.zsh = {
@@ -64,7 +64,7 @@
     };
 
     programs.pyenv = {
-      enable = true;
-      enableZshIntegration = true;
+        enable = true;
+        enableZshIntegration = true;
     };
 }
