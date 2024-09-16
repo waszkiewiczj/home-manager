@@ -13,10 +13,14 @@
             eamodio.gitlens
             vscodevim.vim
             bbenoist.nix
+            golang.go
         ];
         userSettings = {
             "workbench.colorTheme" = "Dracula Theme";
             "editor.fontFamily" = "MesloLGS NF";
+            "go.alternateTools" = {
+                "go" = "~/.nix-profile/bin/go";
+            };
         };
     };
 }
