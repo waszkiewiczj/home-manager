@@ -14,6 +14,7 @@
             vscodevim.vim
             bbenoist.nix
             golang.go
+            ms-vscode.makefile-tools
         ];
         userSettings = {
             "workbench.colorTheme" = "Dracula Theme";
