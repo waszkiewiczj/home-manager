@@ -43,6 +43,7 @@
                 "ansible"
                 "terraform"
                 "gcloud"
+                "pyenv"
             ];
         };
     };
