@@ -5,6 +5,7 @@
         ./zsh.nix
         ./vim.nix
         ./tmux.nix
+        ./container.nix
     ];
 
     home.packages = [
