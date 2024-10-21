@@ -1,5 +1,7 @@
 # Home Manager setup
 
+
+## First application
 In order to apply this setup:
 1. Clone this repository in selected location
 2. Modify default Home Manager configuration file (usually located in `~/.config/home-manager/home.nix`) adding proper import:
@@ -31,3 +33,8 @@ In order to apply this setup:
     ```bash
     home-manager switch
     ```
+
+## Known issues
+
+### VSCode extensions dissapear after applying changes to them
+Simply remove local files for extensions (usually in `~/.vscode/extensions/`) and run `home-manager switch` again.
