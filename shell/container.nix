@@ -2,8 +2,10 @@
 
 {
     home.packages = with pkgs; [
-        docker-client
         colima
+        docker-client
+        docker-compose
+        docker-credential-helpers
         kubectl
         k9s
         k3d
