@@ -6,6 +6,7 @@
         ./vim.nix
         ./tmux.nix
         ./container.nix
+        ./gcloud.nix
     ];
 
     home.packages = [
