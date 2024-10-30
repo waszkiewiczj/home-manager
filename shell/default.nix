@@ -28,9 +28,4 @@
             theme = "Dracula";
         };
     };
-
-    programs.pyenv = {
-        enable = true;
-        enableZshIntegration = true;
-    };
 }
