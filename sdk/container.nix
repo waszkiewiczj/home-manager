@@ -11,4 +11,9 @@
         k3d
     ];
 
+    programs.zsh.oh-my-zsh.plugins = [
+        "docker"
+        "docker-compose"
+        "kubectl"
+    ];
 }

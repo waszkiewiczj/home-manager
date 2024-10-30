@@ -37,9 +37,6 @@
                 "fzf"
                 "direnv"
                 "git"
-                "docker"
-                "docker-compose"
-                "kubectl"
                 "ansible"
                 "terraform"
             ];

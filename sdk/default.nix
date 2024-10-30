@@ -5,5 +5,6 @@
         ./golang.nix
         ./python.nix
         ./gcloud.nix
+        ./container.nix
     ];
 }
