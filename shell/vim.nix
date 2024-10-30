@@ -5,7 +5,6 @@
         enable = true;
         plugins = with pkgs.vimPlugins; [
             dracula-vim
-            fzf-vim
             nerdtree
             lightline-vim
             vim-gitgutter

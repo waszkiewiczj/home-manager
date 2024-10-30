@@ -6,15 +6,12 @@
         ./vim.nix
         ./tmux.nix
         ./fzf.nix
+        ./direnv.nix
     ];
 
     home.packages = [
         pkgs.tig
     ];
-
-    programs.direnv = {
-        enable = true;
-    };
 
     programs.bat = {
         enable = true;
