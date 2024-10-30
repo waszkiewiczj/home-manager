@@ -42,7 +42,6 @@
                 "kubectl"
                 "ansible"
                 "terraform"
-                "gcloud"
             ];
         };
     };

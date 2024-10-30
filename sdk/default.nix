@@ -4,5 +4,6 @@
     imports = [
         ./golang.nix
         ./python.nix
+        ./gcloud.nix
     ];
 }
