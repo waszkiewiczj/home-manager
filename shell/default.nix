@@ -33,8 +33,4 @@
         enable = true;
         enableZshIntegration = true;
     };
-
-    programs.go = {
-        enable = true;
-    };
 }
