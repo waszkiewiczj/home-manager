@@ -28,9 +28,6 @@
         ];
         oh-my-zsh = {
             enable = true;
-            plugins = [
-                "ansible"
-            ];
         };
     };
 }
