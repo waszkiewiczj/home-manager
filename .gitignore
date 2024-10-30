@@ -1,5 +1,2 @@
-# workstation specific
-home.nix
-
 # macOS
 .DS_Store
