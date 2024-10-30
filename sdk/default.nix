@@ -6,5 +6,6 @@
         ./python.nix
         ./gcloud.nix
         ./container.nix
+        ./terraform.nix
     ];
 }

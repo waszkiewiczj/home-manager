@@ -38,7 +38,6 @@
                 "direnv"
                 "git"
                 "ansible"
-                "terraform"
             ];
         };
     };
