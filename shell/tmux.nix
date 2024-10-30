@@ -20,4 +20,15 @@
         extraConfig = ''
         '';
     };
+
+    programs.zsh = {
+        envExtra = ''
+            export ZSH_TMUX_AUTOSTART="true"
+            export ZSH_TMUX_AUTOCONNECT="false"
+        '';
+
+        oh-my-zsh.plugins = [
+            "tmux"
+        ];
+    };
 }

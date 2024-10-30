@@ -26,14 +26,9 @@
                 };
             }
         ];
-        envExtra = ''
-            export ZSH_TMUX_AUTOSTART="true"
-            export ZSH_TMUX_AUTOCONNECT="false"
-        '';
         oh-my-zsh = {
             enable = true;
             plugins = [
-                "tmux"
                 "fzf"
                 "direnv"
                 "git"
