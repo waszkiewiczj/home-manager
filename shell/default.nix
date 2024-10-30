@@ -5,6 +5,7 @@
         ./zsh.nix
         ./vim.nix
         ./tmux.nix
+        ./fzf.nix
     ];
 
     home.packages = [
@@ -12,10 +13,6 @@
     ];
 
     programs.direnv = {
-        enable = true;
-    };
-
-    programs.fzf = {
         enable = true;
     };
 
