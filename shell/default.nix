@@ -4,14 +4,10 @@
     imports = [
         ./zsh.nix
         ./vim.nix
+        ./git.nix
         ./tmux.nix
         ./fzf.nix
         ./direnv.nix
         ./bat.nix
     ];
-
-    home.packages = [
-        pkgs.tig
-    ];
-
 }
