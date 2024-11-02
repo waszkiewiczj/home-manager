@@ -4,7 +4,6 @@
     programs.vim = {
         enable = true;
         plugins = with pkgs.vimPlugins; [
-            dracula-vim
             nerdtree
             lightline-vim
             vim-gitgutter
@@ -19,8 +18,6 @@
             let g:lightline = {
                 \ 'colorscheme': 'one',
                 \ }
-
-            colorscheme dracula 
 
             let NERDTreeShowHidden=1
             " Start NERDTree. If a file is specified, move the cursor to its window.

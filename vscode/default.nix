@@ -8,7 +8,6 @@
     programs.vscode = {
         enable = true;
         extensions = with pkgs.vscode-extensions; [
-            dracula-theme.theme-dracula
             oderwat.indent-rainbow
             eamodio.gitlens
             vscodevim.vim
@@ -16,7 +15,6 @@
             ms-vscode.makefile-tools
         ];
         userSettings = {
-            "workbench.colorTheme" = "Dracula Theme";
             "editor.fontFamily" = "MesloLGS NF";
         };
     };

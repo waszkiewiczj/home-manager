@@ -4,5 +4,6 @@
     ./shell
     ./vscode
     ./sdk
+    ./themes/dracula
   ];
 }
