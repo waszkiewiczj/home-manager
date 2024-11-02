@@ -38,4 +38,21 @@
     programs.bat.config = {
         theme = "Dracula";
     };
+
+    # zsh
+    home.file.dracula-zsh-theme = {
+        enable = true;
+        target = ".oh-my-zsh/themes/";
+        source = pkgs.fetchFromGitHub {
+            owner = "dracula";
+            repo = "zsh";
+            rev = "75ea3f5e1055291caf56b4aea6a5d58d00541c41";
+            sha256 = "sha256-TuKC1wPdq2OtEeViwnAmitpdaanyXHJmBcqV+rHxy34=";
+        };
+        recursive = true;
+    };
+    programs.zsh.oh-my-zsh = {
+        custom = "$HOME/.oh-my-zsh";
+        theme = "dracula";
+    };
 }
