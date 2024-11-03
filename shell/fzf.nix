@@ -10,4 +10,10 @@
     programs.vim.plugins = with pkgs.vimPlugins; [
         fzf-vim
     ];
+
+    programs.tmux = {
+        plugins = with pkgs.tmuxPlugins; [
+            tmux-fzf
+        ];
+    };
 }   
