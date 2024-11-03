@@ -2,6 +2,28 @@
 { config, lib, pkgs, ... }:
 
 {
+    # terminal (macOS only)
+    # TODO: enable only for macOS
+    home.file.dracula-macos-terminal-theme = {
+        enable = true;
+        target = ".terminal-themes/dracula";
+        source = pkgs.fetchFromGitHub {
+            owner = "dracula";
+            repo = "terminal-app";
+            rev = "9d6b88a11c540852d79b795ea31df5835181036b";
+            sha256 = "sha256-nDrqsMpTE4VIpdB7Bv2HSAdZnTGlj9ZDxXWE77XnMU0=";
+        };
+        recursive = true;
+        # TODO: find a way to preserve Meslo font
+        onChange = ''
+            /usr/bin/open ~/.terminal-themes/dracula/Dracula.terminal
+            /bin/sleep 5
+            /usr/bin/pkill -x Terminal
+            /usr/bin/defaults write com.apple.Terminal 'Default Window Settings' -string 'Dracula'
+            /usr/bin/defaults write com.apple.Terminal 'Startup Window Settings' -string 'Dracula'
+        '';
+    };
+
     # vscode
     programs.vscode = {
         extensions = with pkgs.vscode-extensions; [
