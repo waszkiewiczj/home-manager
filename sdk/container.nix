@@ -7,7 +7,6 @@
         docker-compose
         docker-credential-helpers
         kubectl
-        k9s
         k3d
     ];
 
@@ -16,4 +15,8 @@
         "docker-compose"
         "kubectl"
     ];
+
+    programs.k9s = {
+        enable = true;
+    };
 }
