@@ -105,7 +105,7 @@
         };
         skins = let 
             foreground = "#f8f8f2";
-            background = "#282a36";
+            background = "default";
             current_line = "#44475a";
             selection = "#44475a";
             comment = "#6272a4";
