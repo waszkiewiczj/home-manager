@@ -1,9 +1,8 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ./shell
-    ./vscode
-    ./sdk
+    ./terminal
+    ./ui
     ./themes/dracula
   ];
 }
