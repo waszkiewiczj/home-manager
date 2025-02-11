@@ -5,6 +5,10 @@
         enable = true;
     };
 
+    home.sessionPath = [
+        "$HOME/go/bin"
+    ];
+
     programs.zsh.oh-my-zsh = {
         plugins = [
             "golang"
