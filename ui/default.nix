@@ -4,5 +4,6 @@
     imports = [
         ./vscode
         ./postman
+        ./dbeaver
     ];
 }
