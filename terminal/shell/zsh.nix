@@ -19,5 +19,14 @@
         oh-my-zsh = {
             enable = true;
         };
+        # required because of issues after MacOS update
+        # see https://github.com/NixOS/nix/issues/3616
+        initExtraFirst = ''
+            # Nix
+            if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+            . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+            fi
+            # End Nix
+        '';
     };
 }
