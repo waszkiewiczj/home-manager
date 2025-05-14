@@ -2,6 +2,7 @@
 
 {
     imports = [
+        ./yaml.nix
         ./golang.nix
         ./python.nix
         ./gcloud.nix
