@@ -13,6 +13,7 @@
             vscodevim.vim
             bbenoist.nix
             ms-vscode.makefile-tools
+            ms-vscode-remote.remote-containers
         ];
         userSettings = {
             "editor.fontFamily" = "MesloLGS NF";
