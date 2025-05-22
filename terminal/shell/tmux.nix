@@ -7,8 +7,10 @@
         clock24 = true;
         plugins = with pkgs.tmuxPlugins; [
             yank
-            sensible
+            # TODO: find out why this overrides default shell
+            # sensible
         ];
+        escapeTime = 50;
     };
 
     programs.zsh = {
