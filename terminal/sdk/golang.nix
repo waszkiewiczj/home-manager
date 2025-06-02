@@ -15,7 +15,7 @@
         ];
     };
 
-    programs.vscode = {
+    programs.vscode.profiles.default = {
         extensions = with pkgs.vscode-extensions; [
             golang.go
         ];

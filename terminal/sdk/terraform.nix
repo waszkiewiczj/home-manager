@@ -11,7 +11,7 @@
         "terraform"
     ];
 
-    programs.vscode.extensions = with pkgs.vscode-extensions; [
+    programs.vscode.profiles.default.extensions = with pkgs.vscode-extensions; [
         hashicorp.terraform
     ];
 }
