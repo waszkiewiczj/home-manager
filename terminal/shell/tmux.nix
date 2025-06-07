@@ -3,14 +3,14 @@
 {   
     programs.tmux = {
         enable = true;
+        sensibleOnTop = false;
         mouse = false;
         clock24 = true;
         plugins = with pkgs.tmuxPlugins; [
             yank
-            # TODO: find out why this overrides default shell
-            # sensible
         ];
         escapeTime = 50;
+        terminal = "screen-256color"; # for proper highlighting style in autosuggestions
     };
 
     programs.zsh = {
