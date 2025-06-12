@@ -29,4 +29,11 @@
             # End Nix
         '';
     };
+
+    home.shell.enableZshIntegration = true;
+
+    programs.nix-your-shell = {
+        enable = true;
+        enableZshIntegration = true;
+    };
 }
