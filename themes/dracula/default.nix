@@ -89,9 +89,19 @@
         };
         recursive = true;
     };
-    programs.zsh.oh-my-zsh = {
-        custom = "$HOME/.oh-my-zsh";
-        theme = "dracula";
+    programs.zsh = {
+        oh-my-zsh = {
+            custom = "$HOME/.oh-my-zsh";
+            theme = "dracula";
+        };
+
+        initContent = lib.mkBefore ''
+            # nix-shell dracula integration
+            if [ -n "''${IN_NIX_SHELL}" ]; then
+                export DRACULA_CUSTOM_VARIABLE="(nix-shell ❄️)"
+            fi
+            # End nix-shell dracula integration
+        '';
     };
 
     # k9s
