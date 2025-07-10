@@ -16,6 +16,13 @@
         recursive = true;
         # TODO: find a way to preserve Meslo font
         onChange = ''
+            /usr/bin/osascript <<EOF
+tell application "Terminal"
+    try
+        delete (first settings set whose name is "Dracula")
+    end try
+end tell
+EOF
             /usr/bin/open ~/.terminal-themes/dracula/Dracula.terminal
             /bin/sleep 5
             /usr/bin/osascript <<EOF
