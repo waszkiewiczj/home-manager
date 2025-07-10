@@ -18,6 +18,16 @@
         onChange = ''
             /usr/bin/open ~/.terminal-themes/dracula/Dracula.terminal
             /bin/sleep 5
+            /usr/bin/osascript <<EOF
+tell application "Terminal"
+    repeat with s in settings sets
+        if name of s is "Dracula" then
+            set font name of s to "MesloLGS NF"
+            set font size of s to 12
+        end if
+    end repeat
+end tell
+EOF
             /usr/bin/pkill -x Terminal
             /usr/bin/defaults write com.apple.Terminal 'Default Window Settings' -string 'Dracula'
             /usr/bin/defaults write com.apple.Terminal 'Startup Window Settings' -string 'Dracula'
