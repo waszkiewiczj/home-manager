@@ -31,6 +31,9 @@
             fi
             # End Nix
         '';
+        envExtra = ''
+            export TIMER_PRECISION=2
+        '';
     };
 
     home.shell.enableZshIntegration = true;
