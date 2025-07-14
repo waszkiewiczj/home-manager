@@ -19,6 +19,8 @@
             ];
             userSettings = {
                 "editor.fontFamily" = "MesloLGS NF";
+                "workbench.activityBar.location" = "top";
+                "workbench.secondarySideBar.defaultVisibility" = "visible";
             };
         };
     };
