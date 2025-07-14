@@ -18,6 +18,9 @@
         ];
         oh-my-zsh = {
             enable = true;
+            plugins = [
+                "timer"
+            ];
         };
         # required because of issues after MacOS update
         # see https://github.com/NixOS/nix/issues/3616
