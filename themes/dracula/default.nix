@@ -66,9 +66,12 @@ EOF
         {
             plugin = dracula;
             extraConfig = ''
-                set -g @dracula-plugins "ssh-session cpu-usage ram-usage"
+                set -g @dracula-plugins "time"
+                set -g @dracula-time-format "%T"
+                set -g @dracula-show-empty-plugins false
+                set -g @dracula-show-left-icon "#H"
                 set -g @dracula-show-powerline true
-                set -g @dracula-refresh-rate 5
+                set -g @dracula-refresh-rate 1
             '';
         }
     ];
