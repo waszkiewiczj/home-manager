@@ -20,13 +20,6 @@
             userSettings = {
                 "editor.fontFamily" = "MesloLGS NF";
                 "workbench.activityBar.location" = "top";
-                "workbench.secondarySideBar.defaultVisibility" = "visible";
-                "editor.minimap" = {
-                    "enabled" = true;
-                    "side" = "right";
-                    "autohide" = true;
-                    "showSlider" = "mouseover";
-                };
             };
         };
     };
