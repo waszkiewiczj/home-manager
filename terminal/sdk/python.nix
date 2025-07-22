@@ -9,4 +9,10 @@
     programs.zsh.oh-my-zsh.plugins = [
         "python"
     ];
+
+    programs.vscode.profiles.default = {
+        extensions = with pkgs.vscode-extensions; [
+            ms-python.python
+        ];
+    };
 }
