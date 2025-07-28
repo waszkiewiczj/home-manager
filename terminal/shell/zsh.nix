@@ -24,7 +24,7 @@
         };
         # required because of issues after MacOS update
         # see https://github.com/NixOS/nix/issues/3616
-        initContent = lib.mkBefore ''
+        profileExtra = lib.mkBefore ''
             # Nix
             if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
             . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
