@@ -15,10 +15,18 @@
         });
     };
 
-    programs.zsh.oh-my-zsh.plugins = [
-        "python"
-        "pyenv"
-    ];
+    programs.zsh = {
+        oh-my-zsh.plugins = [
+            "python"
+            "pyenv"
+        ];
+
+        initContent = lib.mkBefore ''
+            export PYENV_ROOT="$HOME/.pyenv"
+            export PATH="$PYENV_ROOT/bin:$PATH"
+            eval "$(pyenv init --path)"
+        '';
+    };
 
     programs.vscode.profiles.default = {
         extensions = with pkgs.vscode-extensions; [
