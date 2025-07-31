@@ -3,7 +3,7 @@
 
 {
     # terminal (macOS only)
-    # TODO: enable only for macOS
+    # TODO: enable only for macOS - use lib.mkIf
     home.file.dracula-macos-terminal-theme = {
         enable = true;
         target = ".terminal-themes/dracula";
