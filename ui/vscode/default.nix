@@ -20,6 +20,7 @@
             userSettings = {
                 "editor.fontFamily" = "MesloLGS NF";
                 "workbench.activityBar.location" = "top";
+                "editor.minimap.autohide" = true;
             };
         };
     };
