@@ -55,5 +55,10 @@
             ms-python.debugpy
             ms-python.pylint
         ];
+        userSettings = {
+            "pylint.path" = [
+                "~/.pyenv/shims/pylint"
+            ];
+        };
     };
 }
