@@ -16,6 +16,7 @@
                 bbenoist.nix
                 ms-vscode.makefile-tools
                 ms-vscode-remote.remote-containers
+                jebbs.plantuml
             ];
             userSettings = {
                 "editor.fontFamily" = "MesloLGS NF";
