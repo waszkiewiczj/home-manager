@@ -34,6 +34,7 @@
         oh-my-zsh.plugins = [
             "python"
             "pyenv"
+            "poetry"
         ];
 
         initContent = lib.mkBefore ''
