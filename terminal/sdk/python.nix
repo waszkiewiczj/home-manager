@@ -35,6 +35,7 @@
             "python"
             "pyenv"
             "poetry"
+            "poetry-env"
         ];
 
         initContent = lib.mkBefore ''
