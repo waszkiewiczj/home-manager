@@ -26,6 +26,10 @@
         });
     };
 
+    programs.poetry = {
+        enable = true;
+    };
+
     programs.zsh = {
         oh-my-zsh.plugins = [
             "python"
