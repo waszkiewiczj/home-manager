@@ -17,6 +17,7 @@
                 ms-vscode.makefile-tools
                 ms-vscode-remote.remote-containers
                 jebbs.plantuml
+                ms-vscode-remote.remote-ssh
             ];
             userSettings = {
                 "editor.fontFamily" = "MesloLGS NF";
