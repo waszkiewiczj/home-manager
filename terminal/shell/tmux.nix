@@ -20,7 +20,8 @@
         '';
 
         oh-my-zsh.plugins = [
-            "tmux"
+            # TODO: verify why I got 'open terminal failed: not a terminal' error
+            # "tmux"
         ];
     };
 }
