@@ -1,6 +1,8 @@
 { config, lib, pkgs, ... }:
 
-{   
+{
+    # WARNING - REMEMBER TO RESTART TMUX (`tmux kill-server`) AFTER UPDATE
+    # https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=291325#c4
     programs.tmux = {
         enable = true;
         sensibleOnTop = false;
@@ -20,8 +22,7 @@
         '';
 
         oh-my-zsh.plugins = [
-            # TODO: verify why I got 'open terminal failed: not a terminal' error
-            # "tmux"
+            "tmux"
         ];
     };
 }
