@@ -23,7 +23,7 @@
                 "editor.fontFamily" = "MesloLGS NF";
                 "workbench.activityBar.location" = "top";
                 "editor.minimap.autohide" = "mouseover";
-                "terminal.integrated.suggest.enabled" = false;
+                "terminal.integrated.shellIntegration.enabled" = false;
             };
         };
     };
